@@ -1,22 +1,22 @@
-// sw.js - Service Worker para Salón mujer Virtuosa
+// sw.js - Service Worker para Yailen Nails
 
-const CACHE_NAME = 'salonmujervirtuosa-v1';
+const CACHE_NAME = 'yailennails-v1';
 const urlsToCache = [
-  '/salonmujervirtuosa/',
-  '/salonmujervirtuosa/index.html',
-  '/salonmujervirtuosa/admin.html',
-  '/salonmujervirtuosa/admin-login.html',
-  '/salonmujervirtuosa/setup-wizard.html',
-  '/salonmujervirtuosa/editar-negocio.html',
-  '/salonmujervirtuosa/manifest.json',
-  '/salonmujervirtuosa/icons/icon-72x72.png',
-  '/salonmujervirtuosa/icons/icon-96x96.png',
-  '/salonmujervirtuosa/icons/icon-128x128.png',
-  '/salonmujervirtuosa/icons/icon-144x144.png',
-  '/salonmujervirtuosa/icons/icon-152x152.png',
-  '/salonmujervirtuosa/icons/icon-192x192.png',
-  '/salonmujervirtuosa/icons/icon-384x384.png',
-  '/salonmujervirtuosa/icons/icon-512x512.png'
+  '/yailennails/',
+  '/yailennails/index.html',
+  '/yailennails/admin.html',
+  '/yailennails/admin-login.html',
+  '/yailennails/setup-wizard.html',
+  '/yailennails/editar-negocio.html',
+  '/yailennails/manifest.json',
+  '/yailennails/icons/icon-72x72.png',
+  '/yailennails/icons/icon-96x96.png',
+  '/yailennails/icons/icon-128x128.png',
+  '/yailennails/icons/icon-144x144.png',
+  '/yailennails/icons/icon-152x152.png',
+  '/yailennails/icons/icon-192x192.png',
+  '/yailennails/icons/icon-384x384.png',
+  '/yailennails/icons/icon-512x512.png'
 ];
 
 // ============================================
@@ -108,7 +108,7 @@ self.addEventListener('fetch', event => {
           }
           // Si no hay cache y es imagen, devolver icon por defecto
           if (event.request.url.match(/\.(jpg|jpeg|png|gif|svg|webp)$/)) {
-            return caches.match('/salonmujervirtuosa/icons/icon-192x192.png');
+            return caches.match('/yailennails/icons/icon-192x192.png');
           }
           return new Response('Error de red', { status: 408 });
         });
@@ -138,6 +138,6 @@ self.addEventListener('message', event => {
   }
 });
 
-console.log('✅ Service Worker configurado para Salón mujer Virtuosa');
+console.log('✅ Service Worker configurado para Yailen Nails');
 console.log('📦 Cache:', CACHE_NAME);
 console.log('📄 Archivos a cachear:', urlsToCache.length);
