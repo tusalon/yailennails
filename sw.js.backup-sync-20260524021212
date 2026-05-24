@@ -1,6 +1,6 @@
 // sw.js - Service Worker para Yailen Nails
 
-const CACHE_NAME = 'yailennails-v29';
+const CACHE_NAME = 'yailennails-v25';
 const urlsToCache = [
   '/yailennails/',
   '/yailennails/index.html',
