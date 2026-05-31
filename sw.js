@@ -1,6 +1,6 @@
 // sw.js - Service Worker para Yailen Nails
 
-const CACHE_NAME = 'yailennails-v29';
+const CACHE_NAME = 'yailennails-v47';
 const urlsToCache = [
   '/yailennails/',
   '/yailennails/index.html',
@@ -17,7 +17,14 @@ const urlsToCache = [
   '/yailennails/icons/icon-152x152.png',
   '/yailennails/icons/icon-192x192.png',
   '/yailennails/icons/icon-384x384.png',
-  '/yailennails/icons/icon-512x512.png'
+  '/yailennails/icons/icon-512x512.png',
+  '/yailennails/vendor/react.production.min.js',
+  '/yailennails/vendor/react-dom.production.min.js',
+  '/yailennails/vendor/babel.min.js',
+  '/yailennails/vendor/bcrypt.min.js',
+  '/yailennails/vendor/tailwind-browser.js',
+  '/yailennails/vendor/lucide/lucide.css',
+  '/yailennails/vendor/lucide/lucide.woff2'
 ];
 
 // ============================================
